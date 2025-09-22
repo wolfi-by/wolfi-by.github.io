@@ -34,3 +34,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # gem "github-pages"
 gem "github-pages", "~> 232", group: :jekyll_plugins
+
+# page rdirection
+gem 'jekyll-redirect-from'
