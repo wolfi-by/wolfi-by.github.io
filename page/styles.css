@@ -1,0 +1,115 @@
+:root {
+  --blue: #1e90ff;
+  --lightblue: #add8e6;
+  --yellow: #ffff00;
+  --lightgray: #d3d3d3;
+  --gray: #808080;
+  --white: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: calc(100vh - 40px);
+}
+
+.header {
+  height: 50px;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightblue);
+  border: 1px solid var(--blue);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: var(--lightgray);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  flex-direction: row;
+}
+
+.buttonAnimation {
+  animation: myAnimation 10s linear infinite;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes myAnimation {
+  0% {
+    background-color: var(--lightgray);
+    border-radius: 0%;
+  }
+  5% {
+    scale: 200%;
+    background-color: var(--blue);
+    border-radius: 25%;
+  }
+  10% {
+    scale: 100%;
+    background-color: var(--yellow);
+    border-radius: 50%;
+  }
+  100% {
+    background-color: var(--yellow);
+    border-radius: 50%;
+  }
+}
+
+#headtext {
+  font-size: 2rm;
+  font-weight: bold;
+  position: relative;
+}
+#headtext:after {
+  content: "";
+  animation: head 9s linear infinite;
+}
+
+@keyframes head {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+    content: "Beratung";
+  }
+  25% {
+    opacity: 0;
+  }
+  37% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    content: "Begleitung";
+  }
+  62% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+    content: "Betreuung";
+  }
+  87% {
+    opacity: 0;
+  }
+}
