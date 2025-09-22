@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 768px) {
-  .flex-container {
+  .footer {
     flex-direction: column;
     justify-content: space-around;
   }
